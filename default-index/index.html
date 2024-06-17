@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ikula.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="ikula">
+<meta property="og:url" content="https://blog.ikula.top/default-index/index.html">
+<meta property="og:site_name" content="ikula">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:tag" content="Linux,NAS,unraid,docker">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.ikula.top/default-index/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"default-index/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>ikula</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ikula</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.ikula.top/309fe4ca/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ikula">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ikula">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/309fe4ca/" class="post-title-link" itemprop="url">esp-32</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-16 18:13:01" itemprop="dateCreated datePublished" datetime="2024-06-16T18:13:01+08:00">2024-06-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-17 10:19:12" itemprop="dateModified" datetime="2024-06-17T10:19:12+08:00">2024-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">嵌入式开发</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1>嵌入式开发开始</h1>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.ikula.top/8a833a3e/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ikula">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ikula">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/8a833a3e/" class="post-title-link" itemprop="url">NVidia-driver</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-16 16:13:16" itemprop="dateCreated datePublished" datetime="2024-06-16T16:13:16+08:00">2024-06-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-17 10:19:12" itemprop="dateModified" datetime="2024-06-17T10:19:12+08:00">2024-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/NAS/" itemprop="url" rel="index"><span itemprop="name">NAS</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/NAS/unraid/" itemprop="url" rel="index"><span itemprop="name">unraid</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>当我们使用unraid的应用市场安装NVidia驱动的时候，很容易遇到安装界面像卡住一样，进度条也一直不动（其中根本就不在前端web页面展示进度条，以及国内糟糕的网络环境，况且这个驱动包也是算比较大的</p>
+<p><img src="https://content.invisioncic.com/u329766/monthly_2023_07/image.thumb.png.17e52d194a35a91e1c9e6b555e52c13e.png" alt=""></p>
+<p>其实我们可以自己手动下载驱动包，然后导入Plugins的目录内来完成安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">#进入boot分区的Plugins目录内</span></span></span><br><span class="line">cd /boot/config/plugins/nvidia-driver/packages</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">#查看版本号</span></span></span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<p>本人机器是为6.1.74版本的</p>
+<p><img src="/images/unraid/nvidia-driver-version.jpg" alt=""></p>
+<p>然后去<a target="_blank" rel="noopener" href="https://github.com/ich777/unraid-nvidia-driver/releases">Releases</a>页面下载对于版本的驱动文件（zip）和校验文件（md5）</p>
+<p><img src="/images/unraid/page-version.jpg" alt=""></p>
+<blockquote>
+<p>🔔</p>
+<p>一定要下载校验文件，不然可能导致无法开机</p>
+</blockquote>
+<h2 id="最后希望看到这篇文章的人能给作者点个⭐">最后希望看到这篇文章的人能给<a target="_blank" rel="noopener" href="https://github.com/ich777/unraid-nvidia-driver">作者</a>点个⭐</h2>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.ikula.top/83dcefb7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ikula">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ikula">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/83dcefb7/" class="post-title-link" itemprop="url">证书签发</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-15 23:51:58" itemprop="dateCreated datePublished" datetime="2024-06-15T23:51:58+08:00">2024-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-17 10:12:01" itemprop="dateModified" datetime="2024-06-17T10:12:01+08:00">2024-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/NAS/" itemprop="url" rel="index"><span itemprop="name">NAS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1>利用acme.sh进行证书签发</h1>
+<blockquote>
+<p>官网</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://get.acme.sh | sh</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>国内</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://gitee.com/neilpang/acme.sh | sh</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>安装letsencrypt服务 ##最新版acme默认已经安装此服务</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --set-default-ca --server letsencrypt</span><br></pre></td></tr></table></figure>
+<p>申请证书</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh  --issue  -d domain.com -d www.domain.com  --webroot /home/domain.com/</span><br></pre></td></tr></table></figure>
+<p>如出现如下错误</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: acme.sh: command not found #	unraid在重启后安装后会出现如下错误</span><br></pre></td></tr></table></figure>
+<p>解决办法</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root/.acme.sh/  #	这里是指在unraid环境下用root账户执行acme的安装</span><br><span class="line">alias acme.sh=~/.acme.sh/acme.sh</span><br><span class="line">acme.sh -h			#	测试是否正常使用acme.sh</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.ikula.top/7f0b2dfc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ikula">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ikula">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/7f0b2dfc/" class="post-title-link" itemprop="url">青猪圣地巡游</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-03 13:34:15" itemprop="dateCreated datePublished" datetime="2024-05-03T13:34:15+08:00">2024-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-05-15 00:00:00" itemprop="dateModified" datetime="2024-05-15T00:00:00+08:00">2024-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%97%85%E6%B8%B8/" itemprop="url" rel="index"><span itemprop="name">旅游</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%97%85%E6%B8%B8/%E5%9C%A3%E5%9C%B0%E5%B7%A1%E6%B8%B8/" itemprop="url" rel="index"><span itemprop="name">圣地巡游</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<h1>线路图</h1>
+</blockquote>
+<p><img src="/images/japan/map.jpg" alt="路线图"></p>
+<p>起点从藤沢站出发，经过江之岛水族馆，江之岛，腰越，镰仓高校前，七里滨。对青猪圣地的圣地巡游（非完全版），拍照取点位置如如上所示。</p>
+<hr>
+<blockquote>
+<p><strong>藤泽站</strong></p>
+</blockquote>
+<p>到达藤泽站出来后，在南边的出口就是第一个取景点</p>
+<p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-1.jpg" alt=""></p>
+<p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-2.jpg" alt=""></p>
+<p>往车站里面走就可以看到学姐与咲太在动漫内存储柜的场景</p>
+<p><em>##本人先是从小田急江之岛线到达藤泽站，然后在换成江之岛电铁线去往江之岛</em></p>
+<p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-3.jpg" alt=""></p>
+<p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-4.jpg" alt=""></p>
+<p>继续往站内走到达江之岛电铁线的藤泽站闸机口</p>
+<p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-5.jpg" alt=""></p>
+<p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-6.jpg" alt=""></p>
+<p>进站后就可以看到一个标志性建筑–时钟，跟动漫内的还是有点不一样，可能是重新装修了</p>
+<p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-7.jpg" alt=""></p>
+<blockquote>
+<p><strong>江之岛水族馆</strong></p>
+</blockquote>
+<p>搭乘江之岛电铁线到达江之岛站后下车，大概走个1km左右就可以看到水族馆了，这个也是咲太和学妹一起去江之岛约会出现的场景</p>
+<p><img src="/images/japan/%E6%B0%B4%E6%97%8F%E9%A6%86-1.jpg" alt=""></p>
+<p><img src="/images/japan/%E6%B0%B4%E6%97%8F%E9%A6%86-2.jpg" alt=""></p>
+<blockquote>
+<p><strong>江之岛</strong></p>
+</blockquote>
+<p>从水族馆离开后前往江之岛大桥，在过马路的地下通道以及旁边的沙滩都是动漫内多次出现的场景，地下通道则是咲太与学妹约会的时候出现的</p>
+<p><img src="/images/japan/%E6%B1%9F%E4%B9%8B%E5%B2%9B-1.jpg" alt=""></p>
+<p><img src="/images/japan/%E6%B1%9F%E4%B9%8B%E5%B2%9B-2.jpg" alt=""></p>
+<p>通过大桥前往江之岛就，在半山腰上可以看到咲太与学妹约会的高潮部分的取景的</p>
+<p><img src="/images/japan/%E6%B1%9F%E4%B9%8B%E5%B2%9B-3.jpg" alt=""></p>
+<blockquote>
+<p>[🔔]</p>
+<p>江之岛也是孤独摇滚的取景地，这里也放两张图🤪🤪🤪</p>
+</blockquote>
+<p><img src="/images/japan/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A-1.jpg" alt=""></p>
+<p><img src="/images/japan/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A-2.jpg" alt=""></p>
+<blockquote>
+<p><strong>腰越（镰仓高校方向</strong>）</p>
+</blockquote>
+<p>从江之岛离开后往镰仓高校方向走，差不多位于腰越和镰仓高校前两个车站之间就可以看到动漫op 咲太追电车的场景<br>
+<img src="/images/japan/%E8%85%B0%E8%B6%8A.jpg" alt=""></p>
+<blockquote>
+<p><strong>七里ヶ浜駅</strong></p>
+</blockquote>
+<p>从镰仓高校站坐车前往七里滨站，就可以看到咲太每次下午回家以及早上去学校所经过的车站ーー七里ヶ浜駅</p>
+<p><img src="/images/japan/%E4%B8%83%E9%87%8C%E6%BB%A8-6.jpg" alt=""></p>
+<p><img src="/images/japan/%E4%B8%83%E9%87%8C%E6%BB%A8-5.jpg" alt=""></p>
+<p><img src="/images/japan/%E4%B8%83%E9%87%8C%E6%BB%A8-4.jpg" alt=""></p>
+<blockquote>
+<p><strong>七里ヶ浜海岸</strong></p>
+</blockquote>
+<p>从车站出来后往海边走就可以到达当地著名的旅游景点七里ヶ浜海岸，这里的有一条流入大海的小河以及阶梯都是动漫内经典的场景（可惜沙子跟动漫内不一样，不是金色的</p>
+<p><img src="/images/japan/%E4%B8%83%E9%87%8C%E6%BB%A8-3.jpg" alt=""></p>
+<p><img src="/images/japan/%E4%B8%83%E9%87%8C%E6%BB%A8-2.jpg" alt=""></p>
+<p><img src="/images/japan/%E4%B8%83%E9%87%8C%E6%BB%A8-1.jpg" alt=""></p>
+<h2 id="至此整个圣地旅程就已经结束，虽然没有去藤泽市内的图书馆等圣地，但整个行程还是挺有意思的。然后唯一的遗憾就是自主贩卖机上的没有贩卖学姐所代言的桃子汽水了（😭😭😭">至此整个圣地旅程就已经结束，虽然没有去藤泽市内的图书馆等圣地，但整个行程还是挺有意思的。然后唯一的遗憾就是自主贩卖机上的没有贩卖学姐所代言的桃子汽水了（😭😭😭</h2>
+<p><img src="/images/japan/%E6%A1%83%E5%AD%90%E6%B1%BD%E6%B0%B4.jpg" alt=""></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder"></span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
