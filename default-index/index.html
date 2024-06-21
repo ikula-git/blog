@@ -313,7 +313,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-21 22:53:07" itemprop="dateModified" datetime="2024-06-21T22:53:07+08:00">2024-06-21</time>
+      <time title="修改时间：2024-06-22 00:53:41" itemprop="dateModified" datetime="2024-06-22T00:53:41+08:00">2024-06-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -345,8 +345,7 @@
     <div class="post-body" itemprop="articleBody">
           <p>当我们使用unraid的应用市场安装NVidia驱动的时候，很容易遇到安装界面像卡住一样，进度条也一直不动（其中根本就不在前端web页面展示进度条，以及国内糟糕的网络环境，况且这个驱动包也是算比较大的</p>
 <p><img src="https://content.invisioncic.com/u329766/monthly_2023_07/image.thumb.png.17e52d194a35a91e1c9e6b555e52c13e.png" alt=""></p>
-<p>其实我们可以自己手动下载驱动包，然后导入Plugins的目录内来完成安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">#进入boot分区的Plugins目录内</span></span></span><br><span class="line">cd /boot/config/plugins/nvidia-driver/packages</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">#查看版本号</span></span></span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#进入boot分区的Plugins目录内</span></span><br><span class="line"><span class="built_in">cd</span> /boot/config/plugins/nvidia-driver/packages</span><br><span class="line"><span class="comment">#查看版本号</span></span><br><span class="line"><span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
 <p>本人机器是为6.1.74版本的</p>
 <p><img src="/images/unraid/nvidia-driver-version.jpg" alt=""></p>
 <p>然后去<a target="_blank" rel="noopener" href="https://github.com/ich777/unraid-nvidia-driver/releases">Releases</a>页面下载对于版本的驱动文件（zip）和校验文件（md5）</p>
@@ -418,7 +417,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-21 22:53:12" itemprop="dateModified" datetime="2024-06-21T22:53:12+08:00">2024-06-21</time>
+      <time title="修改时间：2024-06-22 00:54:04" itemprop="dateModified" datetime="2024-06-22T00:54:04+08:00">2024-06-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -454,7 +453,7 @@
 <h1>复制密钥到数据区永久保存</h1>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#假设想要存储在 </span></span><br><span class="line">/boot/config/git/.ssh</span><br><span class="line"><span class="comment">#创建目录</span></span><br><span class="line"><span class="built_in">mkdir</span> /boot/config/git/.ssh</span><br><span class="line"><span class="comment">#备份密钥</span></span><br><span class="line"><span class="built_in">cp</span> /root/.ssh/id_rsa /boot/config/git/.ssh/id_rsa</span><br><span class="line"><span class="built_in">cp</span> /root/.ssh/id_rsa /boot/config/git/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 <h1>设置开机自动加载</h1>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编辑boot分区的go文件</span></span><br><span class="line">nano /boot/config/go</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将下面代码追加到文件末尾</span></span><br><span class="line"><span class="comment"># 复制SSH密钥到root用户的.ssh目录</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /root/.ssh</span><br><span class="line"><span class="built_in">cp</span> /boot/config/git/.ssh/id_rsa /root/.ssh/id_rsa</span><br><span class="line"><span class="built_in">cp</span> /boot/config/git/.ssh/id_rsa.pub /root/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置权限</span></span><br><span class="line"><span class="built_in">chmod</span> 600 /root/.ssh/id_rsa</span><br><span class="line"><span class="built_in">chmod</span> 644 /root/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置Git</span></span><br><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;you@example.com&quot;</span></span><br><span class="line">git config --global core.sshCommand <span class="string">&quot;ssh -i /root/.ssh/id_rsa&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;SSH keys and Git configuration have been set up.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编辑boot分区的go文件</span></span><br><span class="line">nano /boot/config/go</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将下面代码追加到文件末尾</span></span><br><span class="line"><span class="comment"># 复制SSH密钥到root用户的.ssh目录</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /root/.ssh</span><br><span class="line"><span class="built_in">cp</span> /boot/config/git/.ssh/id_rsa /root/.ssh/id_rsa</span><br><span class="line"><span class="built_in">cp</span> /boot/config/git/.ssh/id_rsa.pub /root/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置权限</span></span><br><span class="line"><span class="built_in">chmod</span> 600 /root/.ssh/id_rsa</span><br><span class="line"><span class="built_in">chmod</span> 644 /root/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置Git</span></span><br><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;you@example.com&quot;</span></span><br><span class="line">git config --global core.sshCommand <span class="string">&quot;ssh -i /root/.ssh/id_rsa&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;SSH keys and Git configuration have been set up.&quot;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -517,7 +516,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-21 22:54:46" itemprop="dateModified" datetime="2024-06-21T22:54:46+08:00">2024-06-21</time>
+      <time title="修改时间：2024-06-22 00:48:28" itemprop="dateModified" datetime="2024-06-22T00:48:28+08:00">2024-06-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -549,15 +548,15 @@
     <div class="post-body" itemprop="articleBody">
           <h1>利用acme.sh进行证书签发</h1>
 <h2 id="安装">安装</h2>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">官方</span></span><br><span class="line">curl https://get.acme.sh | sh</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">国内</span></span><br><span class="line">curl https://gitee.com/neilpang/acme.sh | sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#官方</span></span><br><span class="line">curl https://get.acme.sh | sh</span><br><span class="line"><span class="comment">#国内</span></span><br><span class="line">curl https://gitee.com/neilpang/acme.sh | sh</span><br></pre></td></tr></table></figure>
 <h2 id="安装letsencrypt服务">安装letsencrypt服务</h2>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">#最新版acme默认已经安装此服务</span></span></span><br><span class="line">acme.sh --set-default-ca --server letsencryp</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#最新版acme默认已经安装此服务</span></span><br><span class="line">acme.sh --set-default-ca --server letsencryp</span><br></pre></td></tr></table></figure>
 <h2 id="申请证书">申请证书</h2>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh  --issue  -d domain.com -d www.domain.com  --webroot /home/domain.com/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh  --issue  -d domain.com -d www.domain.com  --webroot /home/domain.com/</span><br></pre></td></tr></table></figure>
 <h2 id="如出现如下错误">如出现如下错误</h2>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: acme.sh: command not found #	unraid在重启后安装后会出现如下错误</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#unraid在重启后安装后会出现如下错误</span></span><br><span class="line">-bash: acme.sh: <span class="built_in">command</span> not found </span><br></pre></td></tr></table></figure>
 <h2 id="解决办法">解决办法</h2>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root/.acme.sh/  #	这里是指在unraid环境下用root账户执行acme的安装</span><br><span class="line">alias acme.sh=~/.acme.sh/acme.sh</span><br><span class="line">acme.sh -h			#	测试是否正常使用acme.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#这里是指在unraid环境下用root账户执行acme的安装</span></span><br><span class="line"><span class="built_in">cd</span> /root/.acme.sh/  </span><br><span class="line"><span class="built_in">alias</span> acme.sh=~/.acme.sh/acme.sh</span><br><span class="line"><span class="comment">#测试是否正常使用acme.sh</span></span><br><span class="line">acme.sh -h			</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -656,7 +655,7 @@
 <p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-2.jpg" alt=""></p>
 <p>往车站里面走就可以看到学姐与咲太在动漫内存储柜的场景</p>
 <p><em>##本人先是从小田急江之岛线到达藤泽站，然后在换成江之岛电铁线去往江之岛</em></p>
-<p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-3.jpg" alt=""></p>
+<p>cd /root/.acme.sh/  #   这里是指在unraid环境下用root账户执行acme的安装alias acme.sh=~/.acme.sh/acme.shacme.sh -h          #   测试是否正常使用acme.shbash</p>
 <p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-4.jpg" alt=""></p>
 <p>继续往站内走到达江之岛电铁线的藤泽站闸机口</p>
 <p><img src="/images/japan/%E8%97%A4%E6%B3%BD%E7%AB%99-5.jpg" alt=""></p>

@@ -19,9 +19,9 @@
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
   --highlight-background: #000;
-  --highlight-foreground: #eaeaea;
-  --highlight-gutter-background: #171717;
-  --highlight-gutter-foreground: #d2d2d2;
+  --highlight-foreground: #aaa;
+  --highlight-gutter-background: #101010;
+  --highlight-gutter-foreground: #999;
   color-scheme: light;
 }
 html {
@@ -373,75 +373,72 @@ code.hljs {
   padding: 3px 5px
 }
 /*
-  xt256.css
 
-  Contact: initbar [at] protonmail [dot] ch
-         : github.com/initbar
+Qt Creator dark color scheme
+
 */
 .hljs {
-  color: #eaeaea;
-  background: #000
+  color: #aaaaaa;
+  background: #000000
 }
-.hljs-subst {
-  color: #eaeaea
-}
+.hljs-strong,
 .hljs-emphasis {
+  color: #a8a8a2
+}
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal {
+  color: #ff55ff
+}
+.hljs-code
+.hljs-selector-class {
+  color: #aaaaff
+}
+.hljs-emphasis,
+.hljs-stronge,
+.hljs-type {
   font-style: italic
 }
-.hljs-strong {
-  font-weight: bold
-}
-.hljs-type {
-  color: #eaeaea
-}
-.hljs-params {
-  color: #da0000
-}
-.hljs-literal,
-.hljs-number,
-.hljs-name {
-  color: #ff0000;
-  font-weight: bolder
-}
-.hljs-comment {
-  color: #969896
-}
-.hljs-selector-id,
-.hljs-quote {
-  color: #00ffff
-}
-.hljs-template-variable,
-.hljs-variable,
-.hljs-title {
-  color: #00ffff;
-  font-weight: bold
-}
-.hljs-selector-class,
 .hljs-keyword,
-.hljs-symbol {
-  color: #fff000
+.hljs-selector-tag,
+.hljs-function,
+.hljs-section,
+.hljs-symbol,
+.hljs-name {
+  color: #ffff55
+}
+.hljs-subst,
+.hljs-tag,
+.hljs-title {
+  color: #aaaaaa
+}
+.hljs-attribute {
+  color: #ff5555
+}
+.hljs-variable,
+.hljs-params,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #8888ff
 }
 .hljs-string,
-.hljs-bullet {
-  color: #00ff00
-}
-.hljs-tag,
-.hljs-section {
-  color: #000fff
-}
-.hljs-selector-tag {
-  color: #000fff;
-  font-weight: bold
-}
-.hljs-attribute,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-type,
 .hljs-built_in,
-.hljs-regexp,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-addition,
 .hljs-link {
-  color: #ff00ff
+  color: #ff55ff
 }
-.hljs-meta {
-  color: #fff;
-  font-weight: bolder
+.hljs-comment,
+.hljs-meta,
+.hljs-deletion {
+  color: #55ffff
 }
 .highlight:hover .copy-btn,
 .code-container:hover .copy-btn {
@@ -1217,7 +1214,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #c78361;
+    background: #abff7a;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
