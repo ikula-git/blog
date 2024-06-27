@@ -165,11 +165,6 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ikula-git" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ikula-git" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-  </div>
 
         </div>
       </div>
@@ -299,7 +294,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/8a833a3e/" class="post-title-link" itemprop="url">NVidia-driver</a>
+          <a href="/8a833a3e/" class="post-title-link" itemprop="url">unraid手动安装NVidia驱动</a>
         </h2>
 
         <div class="post-meta-container">
@@ -317,7 +312,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-22 00:53:41" itemprop="dateModified" datetime="2024-06-22T00:53:41+08:00">2024-06-22</time>
+      <time title="修改时间：2024-06-28 00:56:11" itemprop="dateModified" datetime="2024-06-28T00:56:11+08:00">2024-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -347,8 +342,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>当我们使用unraid的应用市场安装NVidia驱动的时候，很容易遇到安装界面像卡住一样，进度条也一直不动（其中根本就不在前端web页面展示进度条，以及国内糟糕的网络环境，况且这个驱动包也是算比较大的</p>
+          <h1>前言</h1>
+<p>当我们使用unraid的应用市场安装NVidia驱动的时候，很容易遇到安装界面像卡住一样，进度条也一直不动（其中根本就不在前端web页面展示进度条，以及国内糟糕的网络环境，况且这个驱动包也是算比较大的</p>
 <p><img src="https://content.invisioncic.com/u329766/monthly_2023_07/image.thumb.png.17e52d194a35a91e1c9e6b555e52c13e.png" alt=""></p>
+<h1>解决方法</h1>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#进入boot分区的Plugins目录内</span></span><br><span class="line"><span class="built_in">cd</span> /boot/config/plugins/nvidia-driver/packages</span><br><span class="line"><span class="comment">#查看版本号</span></span><br><span class="line"><span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
 <p>本人机器是为6.1.74版本的</p>
 <p><img src="/images/unraid/nvidia-driver-version.jpg" alt=""></p>
@@ -403,7 +400,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/1b21edb2/" class="post-title-link" itemprop="url">unraid-git</a>
+          <a href="/1b21edb2/" class="post-title-link" itemprop="url">unraid设置永久保存git相关配置</a>
         </h2>
 
         <div class="post-meta-container">
@@ -414,14 +411,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-06-16 09:02:28" itemprop="dateCreated datePublished" datetime="2024-06-16T09:02:28+08:00">2024-06-16</time>
+      <time title="创建时间：2024-06-16 09:02:02" itemprop="dateCreated datePublished" datetime="2024-06-16T09:02:02+08:00">2024-06-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-22 00:54:04" itemprop="dateModified" datetime="2024-06-22T00:54:04+08:00">2024-06-22</time>
+      <time title="修改时间：2024-06-28 00:54:44" itemprop="dateModified" datetime="2024-06-28T00:54:44+08:00">2024-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -451,7 +448,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>unraid设置永久保存git相关配置</h1>
+          <h1>前言</h1>
 <p>unraid作为一个定制化的NAS系统，在开机重启后会重置掉非数据分区的数据和设置，所以默认命令生成的git公私钥就要备份到数据分区存储，然后设置开机自动将配置文件加载到默认位置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置Git</span></span><br><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;you@example.com&quot;</span></span><br><span class="line"><span class="comment"># 生成ssh密钥</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;you@example.com&quot;</span></span><br></pre></td></tr></table></figure>
 <h1>复制密钥到数据区永久保存</h1>
@@ -502,7 +499,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/83dcefb7/" class="post-title-link" itemprop="url">证书签发</a>
+          <a href="/83dcefb7/" class="post-title-link" itemprop="url">unraid利用acme.sh进行证书签发</a>
         </h2>
 
         <div class="post-meta-container">
@@ -520,7 +517,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-22 00:48:28" itemprop="dateModified" datetime="2024-06-22T00:48:28+08:00">2024-06-22</time>
+      <time title="修改时间：2024-06-28 00:52:19" itemprop="dateModified" datetime="2024-06-28T00:52:19+08:00">2024-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -550,8 +547,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>利用acme.sh进行证书签发</h1>
-<h2 id="安装">安装</h2>
+          <h2 id="安装">安装</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#官方</span></span><br><span class="line">curl https://get.acme.sh | sh</span><br><span class="line"><span class="comment">#国内</span></span><br><span class="line">curl https://gitee.com/neilpang/acme.sh | sh</span><br></pre></td></tr></table></figure>
 <h2 id="安装letsencrypt服务">安装letsencrypt服务</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#最新版acme默认已经安装此服务</span></span><br><span class="line">acme.sh --set-default-ca --server letsencryp</span><br></pre></td></tr></table></figure>
@@ -743,7 +739,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/a27e2ba2/" class="post-title-link" itemprop="url">hexo部署</a>
+          <a href="/a27e2ba2/" class="post-title-link" itemprop="url">hexo + next 部署</a>
         </h2>
 
         <div class="post-meta-container">
@@ -761,7 +757,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-23 14:26:59" itemprop="dateModified" datetime="2024-06-23T14:26:59+08:00">2024-06-23</time>
+      <time title="修改时间：2024-06-28 00:52:36" itemprop="dateModified" datetime="2024-06-28T00:52:36+08:00">2024-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
